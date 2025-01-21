@@ -27,19 +27,12 @@ def apply_discount(sales, discount=0.1):
     return [round(sale * (1 - discount), 2) for sale in sales]
 
 if __name__ == "__main__":
-    # Sample data
     sample_sales = [50, 100, 200, 75, 150]
 
-    # Filtering sales
     filtered_sales = filter_sales(sample_sales, threshold=100)
     print("Filtered Sales:", filtered_sales)
-
-    # Total for filtered sales
     print("Total Filtered Sales:", calculate_daily_sales(filtered_sales))
 
-    # Applying a discount
     discounted_sales = apply_discount(filtered_sales, discount=0.2)
     print("Discounted Sales:", discounted_sales)
-
-    # Total for discounted sales
     print("Total Discounted Sales:", calculate_daily_sales(discounted_sales))
